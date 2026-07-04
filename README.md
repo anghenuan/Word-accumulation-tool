@@ -52,7 +52,7 @@
 
 本程序仅供完成雷颜布置的20篇20词积累而编写。请勿向雷颜透露、将本程序另作他用等，最终解释权归作者本人所有。
 
-<img src="starbucks.ico" alt="starbucks.ico" style="zoom:50%;" />
+<img src="starbucks.ico" alt="starbucks.ico" style="zoom:25%;" />
 
 © anghenuan
 
