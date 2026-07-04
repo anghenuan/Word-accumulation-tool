@@ -11,7 +11,7 @@ from docx.oxml.ns import qn
 
 # ---------- User‑Agent 管理 ----------
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-UA_FILE = os.path.join(SCRIPT_DIR, 'user_agent.txt')
+UA_FILE = os.path.join(SCRIPT_DIR, 'UA.txt')
 
 DEFAULT_UA = (
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '

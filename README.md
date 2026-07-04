@@ -40,7 +40,7 @@
 
   4. 寻找类似`Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0`的字符串，复制并粘贴入框中
 
-  5. 如果不会，可以键入上述User Agent或提示框中的，不一定能通用
+  5. 如果不会，可以键入上述User Agent，不一定能通用
 
   6. 输入的User Agent会保存在根目录下的`_internal\UA.txt`中，如果程序可以找到它，则下次使用可不用输入；同样，在4中输入的User Agent也会写入文件中
 
