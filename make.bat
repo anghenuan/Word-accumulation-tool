@@ -1,0 +1,1 @@
+nuitka --standalone --enable-plugin=tk-inter --msvc=latest --windows-console-mode=disable --lto=yes --jobs=16 --include-data-files=starbucks.ico=starbucks.ico --windows-icon-from-ico=favicon.ico main.py

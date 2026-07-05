@@ -46,13 +46,13 @@
 
      注：源代码User Agent文件存储在根目录下`UA.txt`
 
-6. 打开生成的`单词积累.docx`，根据需要进行调整，然后就可打印。
+6. 打开桌面生成的`单词积累.docx`，根据需要进行调整，然后就可打印。
 
 ## 声明
 
 本程序仅供完成雷颜布置的20篇20词积累而编写。请勿向雷颜透露、将本程序另作他用等，最终解释权归作者本人所有。
 
-<img src="starbucks.ico" alt="starbucks.ico" style="zoom:25%;" />
+![starbucks_icon](favicon.ico)
 
 © anghenuan
 

@@ -49,6 +49,18 @@ def save_user_agent(ua):
     except Exception:
         return False
 
+def get_desktop_path():
+    """返回当前用户桌面路径，若获取失败则返回脚本所在目录"""
+    try:
+        # Windows / macOS / Linux 通用写法
+        desktop = os.path.join(os.path.expanduser('~'), 'Desktop')
+        if os.path.exists(desktop):
+            return desktop
+    except Exception:
+        pass
+    # 回退到脚本所在目录
+    return SCRIPT_DIR
+
 # ---------- 爬虫 ----------
 def fetch_word_info(word):
     url = f'https://www.youdao.com/result?word={word}&lang=en'
@@ -105,6 +117,12 @@ class WordApp:
         root.title("气死雷颜器")
         root.geometry("500x400")
         root.resizable(False, False)
+
+        icon_path = os.path.join(SCRIPT_DIR, 'starbucks.ico')
+        try:
+            root.iconbitmap(icon_path)
+        except Exception:
+            pass   # 图标加载失败不影响程序运行
 
         tk.Label(root, text="输入单词（每行一个，或用逗号/空格分隔）：").pack(pady=(10, 0))
         self.word_text = scrolledtext.ScrolledText(root, height=10, width=60)
@@ -203,7 +221,7 @@ class WordApp:
         self.generate_word(results)
         self.status_label.config(text="生成完毕，文件已保存为“单词积累.docx”")
         self.start_btn.config(state=tk.NORMAL)
-        messagebox.showinfo("完成", "Word 文档已生成：单词积累.docx")
+        messagebox.showinfo("完成", "Word 文档已生成在桌面：单词积累.docx")
 
     def generate_word(self, entries):
         doc = Document()
@@ -249,7 +267,8 @@ class WordApp:
                 run_none = p_ex.add_run("（无例句）")
                 self.set_font(run_none)
 
-        doc.save("单词积累.docx")
+        output_path = os.path.join(get_desktop_path(), "单词积累.docx")
+        doc.save(output_path)
 
     def set_font(self, run):
         run.font.name = '等线'
