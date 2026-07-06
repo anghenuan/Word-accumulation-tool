@@ -196,7 +196,7 @@ class WordApp:
 
         #信息栏
         self.info_label = tk.Label(root, text="本程序由杨镇源开发，仅供完成雷颜布置的20篇20词积累使用。\n请勿向雷颜透露、将本程序另作他用等，最终解释权归作者本人所有。\n© anghenuan", fg="gray")
-        self.info_label.pack(pady=25)
+        self.info_label.pack(pady=15)
 
     def parse_words(self):
         raw = self.word_text.get("1.0", tk.END)
